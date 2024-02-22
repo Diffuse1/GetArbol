@@ -31,13 +31,12 @@ def modoOrdenados(modoPadre, newModo):
         if modoPadre.izquierda is None:
             modoPadre.izquierda = newModo
         else:
-            modoOrdenados(modoHijo)
-        if newModo.valor > modoPadre.valor:
-            modoHijo = modoPadre.Derecha
-            
+            modoOrdenados(modoPadre.izquierda, newModo)            
     if newModo.valor > modoPadre.valor:
         if modoPadre.Derecha is None:
             modoPadre.Derecha = newModo
+        else:
+            modoOrdenados(modoPadre.Derecha, newModo)
     pass
 
 
