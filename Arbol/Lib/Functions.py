@@ -38,5 +38,12 @@ def modoOrdenados(modoPadre, newModo):
         else:
             modoOrdenados(modoPadre.Derecha, newModo)
     pass
+def printArbol(modo):
+    if modo is not None:
+        modoPradre = modo
+        print( modoPradre.getArbol())
+        printArbol(modoPradre.izquierda)
+        printArbol(modoPradre.Derecha)
+    return 0
 
 

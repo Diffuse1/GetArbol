@@ -12,14 +12,26 @@ modo7 = modo (7)
 linkHijo(modo1,modo2,modo3)
 linkHijo(modo2,modo4,modo5)
 linkHijo(modo3,modo6,modo7)
+
 LRV(modo1,PostOrderArr)
 VLR(modo1,PreOrderArr)
 LVR (modo1,inOrderArr)
+
 print( inOrderArr )
 print( PreOrderArr )
 print( PostOrderArr)
 print( modo1.getArbol())
-modoRaiz = modo(16)
+print('-------------------------------------------------------------------------')
+arrModos=[16,5,7,12,9,20,18,3,10,14]
+modoRaiz = None
+for i in range(0,len(arrModos),1):
+    if i == 0:
+        modoRaiz = modo(arrModos[i])
+    else:
+        modoOrdenados(modoRaiz, modo(arrModos[i]))
+    pass
+
+'''modoRaiz = modo(16)
 modo9 = modo(5)
 modo10 = modo(7)
 modo11 = modo(12)
@@ -28,9 +40,10 @@ modo13 = modo(20)
 modo14 = modo(18)
 modo15 = modo (3)
 modo16 = modo(10)
-modo17 = modo(14)
+modo17 = modo(14)'''
 print('Inicia modos Ordenados')
-modoOrdenados(modoRaiz,modo9)
+printArbol( modoRaiz)
+'''modoOrdenados(modoRaiz,modo9)
 modoOrdenados(modoRaiz,modo10)
 modoOrdenados(modoRaiz,modo11)
 modoOrdenados(modoRaiz,modo12)
@@ -48,4 +61,4 @@ print(modo13.getArbol())
 print(modo14.getArbol())
 print(modo15.getArbol())
 print(modo16.getArbol())
-print(modo17.getArbol())#jdd
+print(modo17.getArbol())'''
